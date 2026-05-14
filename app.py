@@ -48,19 +48,21 @@ S2-Pro accepts free-form natural-language instructions in square brackets.
 """
 
 SAMPLE_SCRIPT = """\
-[calm documentary narrator, measured pace] At 2:17 in the morning, the server finally answered.
+[clearing throat] We are live.
 
-[whispering, cautious, close to the microphone] Wait... did you hear that? Don't move.
+[inhale] Okay, let me think. [short pause] Yes. I know exactly what happened.
 
-[nervous laugh, trying to stay calm] Okay. That's fine. Totally fine. Probably just the wind.
+I tried to stay serious, [laughing] but that was the funniest bug report I have ever seen.
 
-[angry, sharp, volume up] No. Absolutely not. I told you not to touch that switch!
+Yeah... [chuckle] okay, I admit it. That was a pretty clever workaround.
 
-[sad, low voice, slow] I thought fixing it would feel like a victory. But now the room is quiet, and I miss the noise.
+Wait... [gasp] the lights just came back on.
 
-[delighted, laughing, bright voice] Oh! There it is! It worked! It actually worked!
+[whisper] Stay very quiet. I think the microphone is finally picking up the room.
 
-[excited, fast pace, pitch up] Local S2-Pro is running, the Streamlit app is connected, and this voice finally has some range.
+[angry] Stop. I told you not to touch that switch. Put it back, right now.
+
+[excited] It worked! The local server is running, Streamlit is connected, and the demo is ready.
 """
 
 # ---------------------------------------------------------------------------

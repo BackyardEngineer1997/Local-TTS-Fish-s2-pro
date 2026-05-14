@@ -20,68 +20,64 @@ from tts_client import TTSParams, is_server_up, synthesize_to_file
 OUTPUT_DIR = Path("output")
 
 # ---------------------------------------------------------------------------
-# Demo scripts — separate clips make tag effects easier to judge
+# Demo scripts — baseline/control pairs using official-style S2-Pro tags
 # ---------------------------------------------------------------------------
 CLIPS = [
     (
-        "01_neutral_narrator",
-        "[calm documentary narrator, measured pace] The backup generator started at 2:17 in the morning.",
+        "01_baseline_plain",
+        "I cannot believe you actually solved the problem on the first try.",
     ),
     (
-        "02_whisper",
-        "[whispering, very quiet, close to the microphone] Wait... stay still. I think someone is outside the door.",
+        "02_laugh",
+        "I cannot believe you actually solved the problem on the first try. [laugh]",
     ),
     (
-        "03_angry",
-        "[angry, sharp, volume up] Stop. I told you not to touch that switch. Put it back, right now.",
+        "03_laughing_inline",
+        "I tried to stay serious, [laughing] but that was the funniest bug report I have ever seen.",
     ),
     (
-        "04_sad",
-        "[sad, low voice, slow pace] I thought fixing it would feel like a victory. But now the room is quiet.",
+        "04_chuckle",
+        "Yeah... [chuckle] okay, I admit it. That was a pretty clever workaround.",
     ),
     (
-        "05_delighted",
-        "[delighted, laughing, bright voice] Oh! There it is! It worked! I cannot believe that actually worked.",
+        "05_chuckling",
+        "[chuckling] No, no, keep going. I want to see where this plan ends up.",
     ),
     (
-        "06_excited",
-        "[excited, fast pace, pitch up] Local S2-Pro is running, Streamlit is connected, and the demo is ready.",
+        "06_clearing_throat",
+        "[clearing throat] Ahem. Let us try that announcement one more time, from the top.",
     ),
     (
-        "07_laughing",
-        "[laughing, amused, bright voice] I tried to stay serious, but that was the funniest thing I heard all week.",
+        "07_sigh",
+        "[sigh] I know. We fixed one problem, and somehow found three more waiting behind it.",
     ),
     (
-        "08_chuckle",
-        "[soft chuckle, warm voice] Yeah... okay, I admit it. That was a pretty clever workaround.",
+        "08_gasp",
+        "Wait... [gasp] the lights just came back on.",
     ),
     (
-        "09_sigh",
-        "[deep sigh, tired voice] I know. We fixed one problem, and somehow found three more waiting behind it.",
+        "09_inhale_exhale",
+        "[inhale] Okay, let me think. [short pause] Yes. I know exactly what happened. [exhale]",
     ),
     (
-        "10_gasp",
-        "[gasp, surprised, breathy voice] Oh! Wait. The lights just came back on.",
+        "10_whisper",
+        "[whisper] Stay very quiet. I think the microphone is finally picking up the room.",
     ),
     (
-        "11_whisper_laugh",
-        "[whispering, quiet laugh, close to the microphone] Don't laugh... but I think the dramatic button was just the power switch.",
+        "11_angry",
+        "[angry] Stop. I told you not to touch that switch. Put it back, right now.",
     ),
     (
-        "12_cough",
-        "[coughing, clears throat, slightly embarrassed] Sorry. Give me one second. I think I swallowed that sentence sideways.",
+        "12_excited",
+        "[excited] It worked! The local server is running, Streamlit is connected, and the demo is ready.",
     ),
     (
-        "13_throat_clear",
-        "[clearing throat, formal voice] Ahem. Let us try that announcement one more time, from the top.",
+        "13_sad",
+        "[sad] I thought fixing it would feel like a victory, but now the room is quiet.",
     ),
     (
-        "14_breathless",
-        "[breathless, hurried, slightly panicked] I ran all the way here because the server finally came online.",
-    ),
-    (
-        "15_giggle",
-        "[giggle, playful, trying not to laugh] No, no, I'm fine. It's just... the error message was weirdly dramatic.",
+        "14_effect_chain",
+        "[clearing throat] We are live. [inhale] Ready? [gasp] Wait, that actually worked. [laughing]",
     ),
 ]
 
