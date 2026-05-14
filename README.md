@@ -82,6 +82,8 @@ On a Lightning.ai Studio or machine:
 ```bash
 git clone <your-repo-url>
 cd Local-TTS-Fish-s2-pro
+sudo apt-get update
+sudo apt-get install -y portaudio19-dev ffmpeg
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv sync
 uv run python download_models.py
@@ -93,6 +95,21 @@ uv run streamlit run app.py --server.address 0.0.0.0 --server.port 8501
 The repo is set up so you can pull it on Lightning.ai and run those commands.
 Do not commit the downloaded model weights; `checkpoints/` is ignored by git.
 Download them directly on the GPU machine with `download_models.py`.
+
+If dependency installation fails with `fatal error: portaudio.h: No such file or
+directory`, run:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y portaudio19-dev
+```
+
+Then rerun:
+
+```bash
+uv sync
+uv run python download_models.py
+```
 
 ## Emotion Tag Format
 

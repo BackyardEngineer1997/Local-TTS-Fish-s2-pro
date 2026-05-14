@@ -115,14 +115,14 @@ def start_background() -> subprocess.Popen:
     print(f"Server started (PID {proc.pid}). Logs → server.log")
     print("Waiting for models to load", end="", flush=True)
 
-    for _ in range(180):
+    for _ in range(600):
         time.sleep(1)
         print(".", end="", flush=True)
         if is_running():
             print(f"\nReady at {SERVER_URL}")
             return proc
 
-    print("\nTimed out waiting for server — check server.log for errors.")
+    print("\nTimed out waiting for server — it may still be loading. Check server.log.")
     return proc
 
 
