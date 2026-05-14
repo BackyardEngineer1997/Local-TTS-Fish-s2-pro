@@ -67,6 +67,22 @@ CLIPS = [
         "11_whisper_laugh",
         "[whispering, quiet laugh, close to the microphone] Don't laugh... but I think the dramatic button was just the power switch.",
     ),
+    (
+        "12_cough",
+        "[coughing, clears throat, slightly embarrassed] Sorry. Give me one second. I think I swallowed that sentence sideways.",
+    ),
+    (
+        "13_throat_clear",
+        "[clearing throat, formal voice] Ahem. Let us try that announcement one more time, from the top.",
+    ),
+    (
+        "14_breathless",
+        "[breathless, hurried, slightly panicked] I ran all the way here because the server finally came online.",
+    ),
+    (
+        "15_giggle",
+        "[giggle, playful, trying not to laugh] No, no, I'm fine. It's just... the error message was weirdly dramatic.",
+    ),
 ]
 
 COMBINED_SCRIPT = "\n\n".join(text for _, text in CLIPS)
