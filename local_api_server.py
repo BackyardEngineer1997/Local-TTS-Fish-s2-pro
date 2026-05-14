@@ -23,7 +23,6 @@ from typing_extensions import Annotated
 
 from tools.server.api_utils import MsgPackRequest, parse_args
 from tools.server.exception_handler import ExceptionHandler
-from tools.server.api_utils import parse_args
 from tools.server.model_manager import ModelManager
 from tools.server.views import routes
 
