@@ -20,25 +20,33 @@ from tts_client import TTSParams, is_server_up, synthesize_to_file
 OUTPUT_DIR = Path("output")
 
 # ---------------------------------------------------------------------------
-# Demo script — a compact sampler with varied S2-Pro inline tags
+# Demo script — a compact scene with strong contrast and varied S2-Pro tags
 # ---------------------------------------------------------------------------
 DEMO_SCRIPT = """\
-[warm professional tone] This is a local Fish Audio S2-Pro quality check.
-[whisper in small voice] Now I am speaking quietly, close to the microphone.
-[angry, volume up] That was not the plan, and I need everyone to pay attention.
-[sad, low voice] Some days are heavier than others, but we keep moving.
-[laughing, delighted] Wait, that actually worked better than I expected.
-[excited, pitch up] The local Streamlit path is ready for testing.
+[calm documentary narrator, measured pace] At 2:17 in the morning, the server finally answered.
+
+[whispering, cautious, close to the microphone] Wait... did you hear that? Don't move.
+
+[nervous laugh, trying to stay calm] Okay. That's fine. Totally fine. Probably just the wind.
+
+[angry, sharp, volume up] No. Absolutely not. I told you not to touch that switch!
+
+[sad, low voice, slow] I thought fixing it would feel like a victory. But now the room is quiet, and I miss the noise.
+
+[delighted, laughing, bright voice] Oh! There it is! It worked! It actually worked!
+
+[excited, fast pace, pitch up] Local S2-Pro is running, the Streamlit app is connected, and this voice finally has some range.
 """
 
 # Emotion tags used — printed as a reference
 TAGS_USED = [
-    "[warm professional tone]",
-    "[whisper in small voice]",
-    "[angry, volume up]",
-    "[sad, low voice]",
-    "[laughing, delighted]",
-    "[excited, pitch up]",
+    "[calm documentary narrator, measured pace]",
+    "[whispering, cautious, close to the microphone]",
+    "[nervous laugh, trying to stay calm]",
+    "[angry, sharp, volume up]",
+    "[sad, low voice, slow]",
+    "[delighted, laughing, bright voice]",
+    "[excited, fast pace, pitch up]",
 ]
 
 
@@ -62,7 +70,7 @@ def main() -> None:
         temperature=0.85,
         top_p=0.9,
         repetition_penalty=1.2,
-        max_new_tokens=512,
+        max_new_tokens=768,
     )
     synthesize_to_file(DEMO_SCRIPT, out_file, params, timeout=900)
 

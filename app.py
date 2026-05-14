@@ -48,35 +48,19 @@ S2-Pro accepts free-form natural-language instructions in square brackets.
 """
 
 SAMPLE_SCRIPT = """\
-[sigh, tired voice] I don't even know where to start today.
+[calm documentary narrator, measured pace] At 2:17 in the morning, the server finally answered.
 
-[short pause] Actually, you know what? I'll start with this morning.
+[whispering, cautious, close to the microphone] Wait... did you hear that? Don't move.
 
-[exhale sharply] So I'm driving to work and this guy just cuts right in front of me!
+[nervous laugh, trying to stay calm] Okay. That's fine. Totally fine. Probably just the wind.
 
-[angry, volume up] I cannot believe the audacity! Absolutely unbelievable!
+[angry, sharp, volume up] No. Absolutely not. I told you not to touch that switch!
 
-[inhale] Okay. Breathe.
+[sad, low voice, slow] I thought fixing it would feel like a victory. But now the room is quiet, and I miss the noise.
 
-[chuckle softly] And then he gives me the look at the red light.
+[delighted, laughing, bright voice] Oh! There it is! It worked! It actually worked!
 
-[laughing] I just started laughing. Right there in my car, laughing like an idiot.
-
-[whisper in small voice] Between you and me, I've been really struggling lately.
-
-[sad, voice breaking] I just... sometimes I wonder if any of it matters.
-
-[long pause]
-
-[exhale slowly] Sorry. That was heavy.
-
-[excited, pitch up] Oh! But they're finally building the metro line!
-
-[delighted, laughing tone] No more traffic! No more road rage!
-
-[satisfied, warm voice] Wouldn't that be something.
-
-[soft laugh] Take care of yourself. And maybe avoid the highway at eight a.m.
+[excited, fast pace, pitch up] Local S2-Pro is running, the Streamlit app is connected, and this voice finally has some range.
 """
 
 # ---------------------------------------------------------------------------
