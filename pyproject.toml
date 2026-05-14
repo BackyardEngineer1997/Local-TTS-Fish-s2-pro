@@ -1,0 +1,26 @@
+[project]
+name = "local-tts-fish-s2-pro"
+version = "0.1.0"
+description = "Fish Audio S2 Pro TTS demo with emotion tags and Streamlit UI"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "fish-audio-sdk>=1.3.0",
+    "fish-speech",
+    "huggingface-hub>=0.34.0,<1.0",
+    "python-dotenv>=1.2.2",
+    "streamlit>=1.57.0",
+    "torch==2.8.0",
+    "torchaudio==2.8.0",
+    "transformers>=4.50.0,<=4.57.3",
+]
+
+[project.scripts]
+demo = "example:main"
+
+[tool.uv]
+override-dependencies = [
+    "protobuf>=3.20.0,<6.0.0",
+]
+
+[tool.uv.sources]
+fish-speech = { git = "https://github.com/fishaudio/fish-speech.git" }

@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+output/
+*.mp3
+*.wav
+*.pcm
+.DS_Store
+checkpoints/
+.server.pid
