@@ -10,9 +10,12 @@ import json
 import multiprocessing
 import os
 import re
+import sys
 from argparse import Namespace
+from pathlib import Path
 from threading import Lock
 
+import pyrootutils
 import uvicorn
 from kui.asgi import Depends, FactoryClass, HTTPException, Kui, OpenAPI, Routes
 from kui.cors import CORSConfig
@@ -20,6 +23,18 @@ from kui.openapi.specification import Info
 from kui.security import bearer_auth
 from loguru import logger
 from typing_extensions import Annotated
+
+
+def _local_setup_root(*args, pythonpath=False, cwd=False, **kwargs):
+    root = Path(__file__).resolve().parent
+    if pythonpath and str(root) not in sys.path:
+        sys.path.insert(0, str(root))
+    if cwd:
+        os.chdir(root)
+    return root
+
+
+pyrootutils.setup_root = _local_setup_root
 
 from tools.server.api_utils import MsgPackRequest, parse_args
 from tools.server.exception_handler import ExceptionHandler
